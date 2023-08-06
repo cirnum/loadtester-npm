@@ -1,20 +1,24 @@
 {
-  "name": "perfcheck",
+  "name": "loadtesterr",
   "version": "1.0.2",
   "description": "Loadtester allows for the distribution of load tests across numerous computers, making it possible to simulate millions of concurrent users.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "go-npm install",
-    "preuninstall": "go-npm uninstall"
+    "postinstall": "node postinstall.js install",
+    "preuninstall": "node postinstall.js uninstall"
   },
   "goBinary": {
-    "name": "perfcheck",
+    "name": "loadster",
     "path": "./bin",
     "url": "https://github.com/cirnum/loadtester/releases/download/release-v{{version}}/loadtester-release-v{{version}}-{{platform}}-{{arch}}.tar.gz"
   },
-  "author": "manojown1@gmail.com",
+  "author":{
+    "name" : "Manoj Choudhary",
+    "email" : "manojown1@gmail.com",
+    "url" : "https://manoj-portfolio-coral.vercel.app/"
+  },
   "license": "ISC",
   "dependencies": {
-    "go-npm": "^0.1.9"
+    "go-npm": "0.1.9"
   }
 }
